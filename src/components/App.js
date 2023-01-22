@@ -27,11 +27,11 @@ const App = () => {
 
       <input id="input" onChange={(e) => setValue(e.target.value)} value={value} ref={inputRef} />
       <button id="button" onClick={onButtonClick}>Click</button>
-      <Fragment>
-        <ul id="list">
+      <ul id="list">
+        <Fragment>
           <List listx={list} />
-        </ul>
-      </Fragment>
+        </Fragment>
+      </ul>
     </div>
   );
 };
