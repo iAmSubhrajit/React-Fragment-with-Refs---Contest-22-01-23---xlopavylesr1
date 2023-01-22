@@ -10,7 +10,7 @@ const App = () => {
   const inputRef = useRef();
 
   const onButtonClick = () => {
-    
+
     setList([]);
     for (let i = 1; i < Number(value) + 1; i++) {
       setList((prev) => [...prev, i]);
@@ -20,16 +20,18 @@ const App = () => {
   };
 
 
- 
+
 
   return (
     <div id="main">
 
       <input id="input" onChange={(e) => setValue(e.target.value)} value={value} ref={inputRef} />
       <button id="button" onClick={onButtonClick}>Click</button>
-      <ul id="list">
-        <List listx={list} />
-      </ul>
+      <Fragment>
+        <ul id="list">
+          <List listx={list} />
+        </ul>
+      </Fragment>
     </div>
   );
 };
